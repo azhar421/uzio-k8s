@@ -1,0 +1,22 @@
+replicaCount: 3
+
+image:
+  repository: hashicorp/http-echo
+  tag: latest
+
+postgres:
+  image: postgres:15
+
+redis:
+  image: redis:7
+
+service:
+  type: ClusterIP
+  port: 5678
+
+
+httpRoute:
+  enabled: false
+
+ingress:
+  enabled: false
